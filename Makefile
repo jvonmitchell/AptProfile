@@ -1,21 +1,21 @@
 
 TARGET=/usr/bin
 
-NAME=/apt-profile
+NAME=apt-profile
 
 BIN=bin/$(NAME)
 
 
 all:
-  mkdir -p bin
-  gcc -o $(BIN) profile.c
+	mkdir -p bin
+	gcc -o $(BIN) profile.c
 
 clean:
-  rm $(BIN) *~ -f
+	rm $(BIN) *~ -f
 
 install:
-  install $(BIN) $(TARGET)
+	install $(BIN) $(TARGET)
 
 remove:
-  rm -f $(TARGET)/$(NAME)
+	rm -f $(TARGET)/$(NAME)
 
